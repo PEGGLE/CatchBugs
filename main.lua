@@ -108,8 +108,7 @@ end
 
 task.spawn(function()
     while true do
-        if not isrbxactive() then continue end
-        if iskeypressed(0x46) then
+        if isrbxactive() and iskeypressed(0x46) then
             auto_catching_enabled = not auto_catching_enabled
             task.wait(0.3)
         end
@@ -119,8 +118,7 @@ end)
 
 task.spawn(function()
     while true do
-        if not isrbxactive() then continue end
-        if auto_catching_enabled then
+        if isrbxactive() and auto_catching_enabled then
             check_for_idle()
             click_on_max_luck()
             play_clicker_minigame()
