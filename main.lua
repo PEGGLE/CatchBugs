@@ -14,8 +14,6 @@ local settings = {
 }
 
 local auto_catching_enabled = false
-[06:22:43] : Vector3(343, -31.50, 632)
-
 
 local teleport_locations = {
     ["Grasslands (Spawn)"] = Vector3.new(152, 8.50, -407),
