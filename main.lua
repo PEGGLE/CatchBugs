@@ -108,7 +108,7 @@ end
 
 task.spawn(function()
     while true do
-        if not isrbxactive() then break end
+        if not isrbxactive() then continue end
         if iskeypressed(0x46) then
             auto_catching_enabled = not auto_catching_enabled
             task.wait(0.3)
