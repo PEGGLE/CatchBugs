@@ -6,7 +6,7 @@ local mouse = lp:GetMouse()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PEGGLE/PeggleUI/refs/heads/main/PeggleLib.lua"))()
 
 local settings = {
-    theme = "dark",
+    theme = "slate",
     auto_catch_keybind = 0x46,
     anti_afk_enabled = true,
     anti_afk_interval = 60,
