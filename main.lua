@@ -119,7 +119,7 @@ end)
 
 task.spawn(function()
     while true do
-        if not isrbxactive() then break end
+        if not isrbxactive() then continue end
         if auto_catching_enabled then
             check_for_idle()
             click_on_max_luck()
