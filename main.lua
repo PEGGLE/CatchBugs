@@ -19,6 +19,7 @@ local teleport_locations = {
     ["Grasslands (Spawn)"] = Vector3.new(152, 8.50, -407),
     ["Forest"] = Vector3.new(20, 4.59, 2),
     ["Caves"] = Vector3.new(343, -31.50, 632),
+    ["Moon Hollow"] = Vector3.new(921, -25.41, 106),
 }
 
 local teleport_names = {}
