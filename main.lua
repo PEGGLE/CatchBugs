@@ -19,7 +19,6 @@ local teleport_locations = {
     ["Grasslands (Spawn)"] = Vector3.new(152, 8.50, -407),
     ["Forest"] = Vector3.new(20, 4.59, 2),
     ["Caves"] = Vector3.new(343, -31.50, 632),
-    ["Moon Hollow"] = Vector3.new(921, -25.41, 106),
 }
 
 local teleport_names = {}
@@ -132,6 +131,19 @@ local function check_for_idle()
     )
     if not any_active then
         mouse1press()
+    end
+end
+
+local function close_rbx_pop_up()
+    local roblox_gui = game:GetService("CoreGui"):FindFirstChild("RobloxGui")
+    if not roblox_gui then return end
+    local popup_frame = roblox_gui:FindFirstChild("PopupFrame")
+    if not popup_frame then return end
+    local popup_decline = popup_frame:FindFirstChild("PopupDeclineButton")
+    if not popup_decline then return end
+    local button_center = popup_decline.AbsolutePosition + (popup_decline.AbsoluteSize / 2)
+    if check_frame_visible(popup_frame) == 1 then
+        mouse_click(button_center)
     end
 end
 
@@ -248,6 +260,7 @@ task.spawn(function()
                 last_afk_time = os.clock()
                 afk_pending = false
             end
+            close_rbx_pop_up()
             check_for_idle()
             click_on_max_luck()
             play_clicker_minigame()
